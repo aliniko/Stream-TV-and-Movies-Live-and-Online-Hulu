@@ -61,6 +61,17 @@ h4 {
     opacity: 0.8;
 }
 
+.btn-outline {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+    color: #fff;
+    border-color: #ccc;
+}
+
 .legal-text {
     font-size: 10px;
     color: #ccc;
@@ -74,6 +85,19 @@ h4 {
     margin-top: 5px;
     text-decoration: underline;
 }
+
+.text-xl {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.sub-text {
+   max-width: 850px;
+   margin-bottom: 10px;
+   font-size: 24px; 
+}
+
+
 /* Header */
 .header {
     height: 530px;
@@ -129,6 +153,75 @@ h4 {
     background: linear-gradient(318.67deg, #0f495c 0%, #0d3640 49.72%, #08141f 100%);
 }
 
+.sub-header > div:last-of-type {
+    justify-self: end;
+    align-self: end;
+}
+
+.sub-header > div:last-of-type  .sub-link {
+    text-align: center;
+}
+
+/* Categories  */
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px;
+}
+
+.categories .covers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.categories .covers > div {
+    height: 500px;
+    width: 300px;
+    position: relative;
+}
+
+.categories .cover-grad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        156.82deg, 
+        rgba(0,0,0, 0.6) 4.58%,
+        rgba(0,0,0,0) 69.61%
+    ),
+    linear-gradient(24.5deg, 
+        rgba(0,0,0,0.2) 4.7%, 
+        rgba(0,0,0,0) 71.49% 
+    );
+}
+
+.categories .cover-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.cover-1 {
+    background: url('../img/cover-1.jpg') no-repeat center center / cover;
+}
+.cover-2 {
+    background: url('../img/cover-2.jpg') no-repeat center center / cover;
+}
+.cover-3 {
+    background: url('../img/cover-3.jpg') no-repeat center center / cover;
+}
+.cover-4 {
+    background: url('../img/cover-4.jpg') no-repeat center center / cover;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -141,7 +234,26 @@ h4 {
         padding: 0 20px;
     }
 
-    .header .header-text-1{
+    .header .header-text-1 {
         font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .header .header-text-2 {
+        display: none;
+    }
+    .sub-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .sub-header img {
+        width: 250px;
+        margin: auto;
+    }
+
+    .sub-header > div:last-of-type {
+        justify-self: center;
+        align-self: center;
     }
 }
