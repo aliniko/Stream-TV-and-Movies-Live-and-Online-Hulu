@@ -361,4 +361,14 @@ h4 {
     .live-border {
         padding: 10px 15px;
     }
+
+    .live-sports {
+        background: url('../img/live-sports-small.jpg') no-repeat center center / cover;
+    }
+
+    .live-sports-content {
+        top: 20px;
+        left: 30px;
+        margin-top: 60px;
+    }
 }
